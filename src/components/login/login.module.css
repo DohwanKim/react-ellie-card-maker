@@ -1,0 +1,42 @@
+.loginWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.loginSection {
+  text-align: center;
+}
+
+.loginSection h3 {
+  color: #ddd;
+  font-weight: 300;
+}
+
+.loginSection ul {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.loginSection button {
+  font-size: 1.2rem;
+  border-color: #025159;
+  background-color: #f9f9f9;;
+  margin-bottom: .5rem;
+  width: 100%;
+  padding: .5rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.loginSection button:hover {
+  background-color: #fff;
+  transform: scale(1.005);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
