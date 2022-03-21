@@ -1,0 +1,10 @@
+.preview h3 {
+  color: #ddd;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.previewWrapper {
+  list-style: none;
+  padding: 0 3rem;
+}

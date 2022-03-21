@@ -1,0 +1,43 @@
+.cardEditForm .row {
+  display: flex;
+}
+
+.cardEditForm input,
+.cardEditForm select,
+.cardEditForm textarea,
+.cardEditForm button {
+  font-size: 1rem;
+  padding: .4rem;
+}
+
+.cardEditForm input,
+.cardEditForm select,
+.cardEditForm div {
+  flex: 1 1 0;
+}
+
+.cardEditForm textarea {
+  width: 100%;
+}
+
+.cardEditForm button {
+  color: #ddd;
+  font-weight: 600;
+  background-color: #038C8C;
+  border: 0;
+  cursor: pointer;
+  border-right: 1px solid #333;
+  transition: all .1s ease-in-out;
+}
+
+.cardEditForm button:last-child {
+  border: 0;
+}
+
+.cardEditForm button:hover {
+  opacity: .9;
+}
+
+.cardEditForm button {
+  flex-grow: 1;
+}

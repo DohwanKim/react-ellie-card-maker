@@ -1,4 +1,5 @@
 header {
+  position: relative;
   text-align: center;
   background-color: #038C8C;
   padding: 1rem 0;
@@ -8,4 +9,22 @@ header h1 {
   color: #fff;
   font-weight: 300;
   margin-bottom: 0;
+}
+
+.logoutButton {
+  color: #F28705;
+  position: absolute;
+  background-color: #025159;
+  border: 0;
+  border-radius: .7rem;
+  padding: .3rem .5rem;
+  font-weight: bold;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.logoutButton:hover {
+  color: #ddd;
 }

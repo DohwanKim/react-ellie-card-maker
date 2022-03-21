@@ -1,0 +1,59 @@
+.card {
+  color: #fff;
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card.dark {
+  background-color: #111;
+}
+
+.card.light {
+  color: #111111 !important;
+  background-color: #e8e7e6;
+}
+
+.card.colorful {
+  background: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
+}
+
+.card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.cardInfo {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.cardInfo .name {
+  font-size: 1.5rem;
+  margin: 0 0 .7rem;
+}
+
+.cardInfo p {
+  font-size: 1rem;
+  margin: 0 0 .5rem;
+}
+
+.cardInfo pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.cardInfo .divider {
+  margin: .7rem 0;
+  border-bottom: 1px solid #fff;
+}

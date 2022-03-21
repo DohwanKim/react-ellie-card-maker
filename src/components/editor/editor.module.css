@@ -1,0 +1,14 @@
+.editor h3 {
+  color: #ddd;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.editor {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.editor .editorWrapper > form {
+  margin-bottom: 1rem;
+}
