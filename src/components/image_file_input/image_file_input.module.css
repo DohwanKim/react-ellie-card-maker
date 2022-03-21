@@ -1,3 +1,29 @@
 .fileInput {
   display: none;
 }
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #025159;
+}
+
+.loading {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid #03A696;
+  border-top: 3px solid #F28705;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
