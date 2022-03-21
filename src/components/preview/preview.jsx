@@ -6,7 +6,9 @@ const Preview = ({ cards }) => {
   return (
     <div className={styles.preview}>
       <h3>Card Preview</h3>
-      <ul className={styles.previewWrapper}>{cards && cards.map(card => <Card key={card.id} card={card} />)}</ul>
+      <ul className={styles.previewWrapper}>
+        {cards && Object.keys(cards).map(key => <Card key={key} card={cards[key]} />)}
+      </ul>
     </div>
   );
 };

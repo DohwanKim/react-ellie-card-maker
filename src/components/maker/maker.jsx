@@ -6,10 +6,10 @@ import Preview from 'components/preview/preview';
 import Editor from 'components/editor/editor';
 import { useNavigate } from 'react-router-dom';
 
-const Maker = ({ authService }) => {
+const Maker = ({ authService, FileInput }) => {
   const navigate = useNavigate();
-  const [cards, setCards] = useState([
-    {
+  const [cards, setCards] = useState({
+    1: {
       id: '1',
       name: 'KimDongGle',
       company: 'SpadeCompany',
@@ -21,7 +21,7 @@ const Maker = ({ authService }) => {
       fileURL:
         'https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?size=626&ext=jpg&ga=GA1.2.1420692388.1641168000',
     },
-    {
+    2: {
       id: '2',
       name: 'KingWonJun',
       company: 'SpadeCompany',
@@ -29,11 +29,11 @@ const Maker = ({ authService }) => {
       title: 'Web Backend',
       email: 'dnjswns@gmail.com',
       message: 'hi!',
-      fileName: 'good-image',
+      fileName: '',
       fileURL:
         'https://images.ctfassets.net/aq13lwl6616q/5EJjT6YQQmQvXd5HSzyZKr/135bca31d7ec981b083cbeac86eef6d7/yihua-compress.jpg',
     },
-    {
+    3: {
       id: '3',
       name: 'Jin',
       company: 'Tekken',
@@ -45,19 +45,23 @@ const Maker = ({ authService }) => {
       fileName: 'good-image',
       fileURL: 'https://i1.sndcdn.com/artworks-000118861913-ds7q8d-t500x500.jpg',
     },
-  ]);
+  });
   const onLogout = () => {
     authService.logout();
   };
-  const onAdd = card => {
-    setCards([...cards, card]);
-  };
-  const onDelete = cardId => {
-    const targetCardIndex = cards.findIndex(card => card.id === cardId);
-    const updated = [...cards];
 
-    updated.splice(targetCardIndex, 1);
+  const onDeleteCard = cardId => {
+    const updated = { ...cards };
+
+    delete updated[cardId];
     setCards(updated);
+  };
+  const onUpdateCard = card => {
+    setCards(cards => {
+      const updated = { ...cards };
+      updated[card.id] = card;
+      return updated;
+    });
   };
 
   useEffect(() => {
@@ -72,7 +76,7 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} onAdd={onAdd} onDelete={onDelete} />
+        <Editor cards={cards} onUpdateCard={onUpdateCard} onDeleteCard={onDeleteCard} FileInput={FileInput} />
         <Preview cards={cards} />
       </div>
       <Footer />

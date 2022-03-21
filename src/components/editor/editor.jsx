@@ -3,15 +3,21 @@ import styles from 'components/editor/editor.module.css';
 import CardEditForm from 'components/card_edit_form/card_edit_form';
 import CardAddForm from '../card_add_form/card_add_form';
 
-const Editor = ({ cards, onAdd, onDelete }) => {
+const Editor = ({ FileInput, cards, onUpdateCard, onDeleteCard }) => {
   return (
     <div className={styles.editor}>
-      <h3>editor</h3>
+      <h3>Editor</h3>
       <div className={styles.editorWrapper}>
-        {cards.map(card => (
-          <CardEditForm card={card} key={card.id} onDelete={onDelete} />
+        {Object.keys(cards).map(key => (
+          <CardEditForm
+            FileInput={FileInput}
+            card={cards[key]}
+            key={key}
+            onUpdateCard={onUpdateCard}
+            onDeleteCard={onDeleteCard}
+          />
         ))}
-        <CardAddForm cards={cards} onAdd={onAdd} />
+        <CardAddForm FileInput={FileInput} onUpdateCard={onUpdateCard} />
       </div>
     </div>
   );

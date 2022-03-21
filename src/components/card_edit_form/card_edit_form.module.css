@@ -21,6 +21,7 @@
 }
 
 .cardEditForm button {
+  flex: 1 1 0;
   color: #ddd;
   font-weight: 600;
   background-color: #038C8C;
@@ -40,8 +41,4 @@
 
 .cardEditForm button {
   flex-grow: 1;
-}
-
-.cardEditForm input[type=file] {
-  display: none;
 }
