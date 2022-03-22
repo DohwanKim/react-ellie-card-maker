@@ -20,13 +20,11 @@ class CardRepository {
   }
 
   saveCard(userId, card) {
-    set(ref(this._db, `${userId}/cards/${card.id}`), card).then(r => {
-      console.log(r);
-    });
+    set(ref(this._db, `${userId}/cards/${card.id}`), card).then(() => {});
   }
 
   removeCard(userId, cardId) {
-    remove(ref(this._db, `${userId}/cards/${cardId}`)).then(r => {});
+    remove(ref(this._db, `${userId}/cards/${cardId}`)).then(() => {});
   }
 }
 
