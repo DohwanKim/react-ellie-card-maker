@@ -1,3 +1,22 @@
+.preview {
+  overflow-y: auto;
+}
+
+.preview::-webkit-scrollbar {
+  width: 10px;
+}
+
+.preview::-webkit-scrollbar-thumb {
+  background-color: #F28705;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.preview::-webkit-scrollbar-track {
+  background-color: #025159;
+}
+
 .preview h3 {
   color: #ddd;
   font-size: 1.3rem;
@@ -5,6 +24,10 @@
 }
 
 .previewWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0 3rem;
 }

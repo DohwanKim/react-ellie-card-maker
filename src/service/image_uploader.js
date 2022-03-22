@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 class ImageUploader {
-  _uploadUrl;
-  _apiKey;
+  _uploadUrl = null;
+  _apiKey = null;
 
   constructor(cloudinaryName, cloudinaryApiKey) {
     this._uploadUrl = `https://api.cloudinary.com/v1_1/${cloudinaryName}/image/upload`;

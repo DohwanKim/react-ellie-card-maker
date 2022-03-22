@@ -1,3 +1,22 @@
+.editor {
+  overflow-y: auto;
+}
+
+.editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background-color: #F28705;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.editor::-webkit-scrollbar-track {
+  background-color: #025159;
+}
+
 .editor h3 {
   color: #ddd;
   font-size: 1.3rem;

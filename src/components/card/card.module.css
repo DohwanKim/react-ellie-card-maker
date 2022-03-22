@@ -6,6 +6,7 @@
   background-color: #fff;
   border-radius: 2rem;
   margin-bottom: 1rem;
+  max-width: 40rem;
 }
 
 .card:last-child {
