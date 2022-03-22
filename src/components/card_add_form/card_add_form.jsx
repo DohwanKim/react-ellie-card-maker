@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import styles from 'components/card_edit_form/card_edit_form.module.css';
 
-const CardAddForm = ({ onUpdateCard, FileInput }) => {
+const CardAddForm = memo(({ onUpdateCard, FileInput }) => {
   const fileMap = { fileName: null, fileURL: null };
   const formRef = useRef();
   const nameRef = useRef();
@@ -66,6 +66,6 @@ const CardAddForm = ({ onUpdateCard, FileInput }) => {
       </div>
     </form>
   );
-};
+});
 
 export default CardAddForm;
